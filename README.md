@@ -1,1 +1,1 @@
-# Course-Bot
+# CourseBot
