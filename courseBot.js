@@ -1,11 +1,13 @@
-console.log('Loading Bot');
+console.log("Loading Bot");
 
-const Discord = require('discord.js');
+require('dotenv').config();
+
+const Discord = require("discord.js");
 const client = new Discord.Client();
-client.login('Nzk3NTc0NjU0MDg4MTgzODM5.X_odRw.l9uCqUCihnaMfrOi7OEfTor8gf0')
+client.login(process.env.BOTTOKEN);
 
 client.on('ready', readyDiscord);
 
 function readyDiscord() {
-    console.log('Bot is Ready');
+    console.log("Bot is Ready");
 }
