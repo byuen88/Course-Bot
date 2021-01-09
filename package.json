@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/byuen88/CourseBot/issues"
   },
-  "homepage": "https://github.com/byuen88/CourseBot#readme"
+  "homepage": "https://github.com/byuen88/CourseBot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
 }
