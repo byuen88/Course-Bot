@@ -1,0 +1,19 @@
+{
+  "name": "coursebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "courseBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byuen88/CourseBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byuen88/CourseBot/issues"
+  },
+  "homepage": "https://github.com/byuen88/CourseBot#readme"
+}
