@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'start',
+    name: 'setZoom',
     description: 'start',
     execute(message, args) {
         if (message.member.roles.cache.find(role => role.name === "Professor") || message.member.roles.cache.find(role => role.name === "TA")) {

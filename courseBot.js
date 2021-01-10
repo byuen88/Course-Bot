@@ -9,6 +9,8 @@ client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
+client.login(token);
+
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	client.commands.set(command.name, command);
@@ -17,7 +19,7 @@ for (const file of commandFiles) {
 client.on('ready', readyDiscord);
 
 function readyDiscord() {
-    console.log("CourseBot is Ready");
+	console.log("CourseBot is Ready");
 }
 
 client.on('message', message => {
@@ -36,4 +38,12 @@ client.on('message', message => {
 	}
 });
 
-client.login(token);
+client.on("message", function(message) {
+    if(message.content.includes('answer') || message.content.includes('Answer')){
+        message.reply("no");
+	}
+	
+});
+
+
+

@@ -3,7 +3,7 @@ module.exports = {
 	name: 'help',
 	description: 'help',
 	execute(message, args) {
-		message.reply('My name is CourseBot. Nice to meet you!');
+		message.reply('My name is CourseBot. The following are the commands you can use.');
 		const embed = new Discord.MessageEmbed()
             .setColor('0c6197')
             .setTitle('Exam Stats')
