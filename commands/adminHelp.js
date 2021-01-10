@@ -10,8 +10,10 @@ module.exports = {
             .setTitle('Exam Stats')
             .addFields(
                 {name: 'Set Syllabus Link', value: '!setsyllabus', inline: false},
-                {name: 'Set Zoom Link', value: '!setzoom', inline: false},
+                {name: 'Set Zoom Reminder', value: '!setzoom', inline: false},
+                {name: 'Set Zoom Reminder help', value: '!setzoomhelp', inline: false},
                 {name: 'Update Exam Stats', value: '!updateexam', inline: false},
+                {name: 'Role Reaction', value: '!role', inline: false},
             )
             .setTimestamp();
         return message.reply(embed);

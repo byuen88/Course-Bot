@@ -1,8 +1,11 @@
 console.log("Loading CourseBot");
+const Discord = require("discord.js");
+const Datastore = require('nedb');
+const Keyv = require('keyv');
 
 const fs = require('fs');
-const Discord = require("discord.js");
 const { prefix, token } = require('./config.json');
+const keyv = new Keyv();
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -18,6 +21,9 @@ for (const file of commandFiles) {
 
 client.on('ready', readyDiscord);
 
+const database = new Datastore('database.db');
+database.loadDatabase();
+
 function readyDiscord() {
 	console.log("CourseBot is Ready");
 }
@@ -31,7 +37,7 @@ client.on('message', message => {
 	if (!client.commands.has(command)) return;
 
 	try {
-		client.commands.get(command).execute(message, args);
+		client.commands.get(command).execute(message, args, Discord, client);
 	} catch (error) {
 		console.error(error);
 		message.reply('there was an error trying to execute that command!');
@@ -39,11 +45,16 @@ client.on('message', message => {
 });
 
 client.on("message", function(message) {
-    if(message.content.includes('answer') || message.content.includes('Answer')){
-        message.reply("no");
+    if(message.content.includes('answer')){
+        message.reply("this better not be an answer to an assignment questions!");
 	}
 	
 });
 
 
-
+client.on("message", function(message) {
+    if(message.content.includes('chegg')){
+        message.reply("youve been expelled from ubc");
+	}
+	
+});

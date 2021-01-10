@@ -5,12 +5,12 @@ module.exports = {
     execute(message, args) {
         const embed = new Discord.MessageEmbed()
             .setColor('0c6197')
-            .setTitle('Exam Stats')
+            .setTitle('Midterm2 Stats')
             .addFields(
-                {name: 'Mean', value: 'test', inline: false},
-                {name: 'Median', value: 'test', inline: false},
-                {name: 'High', value: 'test', inline: false},
-                {name: 'Low', value: 'you', inline: false},
+                {name: 'Mean', value: '69', inline: false},
+                {name: 'Median', value: '72', inline: false},
+                {name: 'High', value: '98', inline: false},
+                {name: 'Low', value: '4', inline: false},
             )
             .setTimestamp();
         return message.channel.send(embed);

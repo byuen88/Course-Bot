@@ -12,13 +12,13 @@ module.exports = {
                 .setTitle('ERROR: Command expects the exam mean, exam median, exam high, exam low, and exam name')
                 return message.reply(embed);
             } else {
-                let mean = args[0];
-                let median = args[1];
-                let high = args[2];
-                let low = args[3];
-                let name = args.slice(Math.max(args.length - 4, 0));
+                let mean = args.shift();
+                let median = args.shift();
+                let high = args.shift();
+                let low = args.shift();
+                let name = args.join(" ");
 
-                return message.reply('Exam stats updated');
+                return message.reply('Exam has been updated');
             }
         } else {
             message.reply('You do not have permission to use this command');
