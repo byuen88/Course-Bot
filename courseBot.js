@@ -54,7 +54,7 @@ client.on("message", function(message) {
 
 client.on("message", function(message) {
     if(message.content.includes('chegg')){
-        message.reply("youve been expelled from ubc");
+        message.reply("tsk tsk tsk");
 	}
 	
 });
