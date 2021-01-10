@@ -46,7 +46,7 @@ client.on('message', message => {
 
 client.on("message", function(message) {
     if(message.content.includes('answer')){
-        message.reply("this better not be an answer to an assignment questions!");
+        message.reply("this is a big no no!");
 	}
 	
 });
