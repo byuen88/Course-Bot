@@ -18,7 +18,7 @@ module.exports = {
                 let low = args.shift();
                 let name = args.join(" ");
 
-                return message.reply('Exam has been updated');
+                return message.reply('Exam information has been updated');
             }
         } else {
             message.reply('You do not have permission to use this command');
